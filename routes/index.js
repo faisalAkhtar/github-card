@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const https = require('https');
+var imageDataURI = require('image-data-uri');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -43,18 +44,22 @@ router.get('/card', function(req, res, next) {
     // A chunk of data has been recieved.
     resp.on('end', () => {
       data = JSON.parse(data)
-      res.status(200).type('image/svg+xml').render('card', {
-        bio: data.bio,
-        location: data.location,
-        name: data.name,
-        avatar: data.avatar_url,
-        followers: data.followers,
-        repos: data.public_repos,
-        id: data.id,
-        github: data.login,
-        twitter: data.twitter_username,
-        blog: data.blog
-      });    
+      imageDataURI.encodeFromURL(data.avatar_url)
+      .then((img) => {
+        res.status(200).type('image/svg+xml').render('card', {
+          bio: data.bio,
+          location: data.location,
+          name: data.name,
+          avatar: img,
+          followers: data.followers,
+          repos: data.public_repos,
+          id: data.id,
+          github: data.login,
+          twitter: data.twitter_username,
+          blog: data.blog
+        });
+      })
+
     })
   })
   post_req.end();
