@@ -43,8 +43,7 @@ router.get('/card', function(req, res, next) {
     // A chunk of data has been recieved.
     resp.on('end', () => {
       data = JSON.parse(data)
-      res.writeHead(200, { 'Content-Type': 'image/svg+xml' })
-      res.render('card', {
+      res.status(200).type('image/svg+xml').render('card', {
         bio: data.bio,
         location: data.location,
         name: data.name,
