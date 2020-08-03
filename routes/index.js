@@ -30,7 +30,13 @@ router.get('/card', function(req, res, next) {
     console.log('\n---------------\nstatusCode:', resp.statusCode);
 
     if(resp.statusCode==404) {
-      res.send(username + " not found!")
+      res.status(200).type('image/svg+xml').render('404 - User not found.ejs', { msg: 'User not found' });
+      return
+    } else if(resp.statusCode==403) {
+      res.status(200).type('image/svg+xml').render('403 - API rate limit exceeded.ejs', { msg: 'API rate limit exceeded' });
+      return
+    } else if(resp.statusCode!=200) {
+      res.status(200).type('image/svg+xml').render('4xx - An unknown error occurred.ejs', { msg: 'An unknown error occurred' });
       return
     }
 
