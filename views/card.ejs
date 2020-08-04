@@ -14,7 +14,7 @@
 	<!ENTITY st10 "font-size:32px;">
 	<!ENTITY st11 "fill:none;stroke:#505037;stroke-miterlimit:10;">
 	<!ENTITY st12 "fill:#B4B342;">
-	<!ENTITY st13 "text-align:center;">
+	<!ENTITY st13 "text-align:center;text-overflow:ellipsis;">
 	<!ENTITY st14 "text-transform:uppercase;">
 ]>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -110,7 +110,7 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 </g>
 <g id="name-div">
 	<rect x="99" y="295.25" style="&st1;" width="402" height="16.14"/>
-	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st13;" width="402" height="20"><%= name %></foreignObject>
+	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st13;" width="402" height="20"><% if(name!=null) { %><%= name %><% } else { %><%= github %><% } %></foreignObject>
 </g>
 <g id="public">
 	<g id="followers-div">
@@ -133,8 +133,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 		</g>
 		<rect x="401.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 449.6328 243.6807)" style="&st2; &st3; &st4;">Followers</text>
-		<rect x="401.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 473.1328 223.6807)" style="&st2; &st3; &st10;"><%= followers %></text>
+		<rect x="401.04" y="197.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="401.04" y="197.5" style="&st2; &st3; &st10; &st13;" width="160.18" height="46.9"><%= followers %></foreignObject>
 	</g>
 	<g id="avatar-div">
 		<image style="overflow:visible;enable-background:new;" width="460" height="460" id="avatar_2_" xlink:href="<%= avatar %>" transform="matrix(0.3804 0 0 0.3804 217.0478 106.0478)">
@@ -155,8 +155,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 			L106.85,182.26z"/>
 		<rect x="41.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 79.1328 244.6807)" style="&st2; &st3; &st4;">Repositories</text>
-		<rect x="40.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 112.1328 223.6807)" style="&st2; &st3; &st10;"><%= repos %></text>
+		<rect x="40.04" y="197.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="40.04" y="197.5" style="&st2; &st3; &st10; &st13;" width="160.18" height="46.9"><%= repos %></foreignObject>
 	</g>
 </g>
 <g id="social">
@@ -231,7 +231,7 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 	<!ENTITY st14 "display:inline;">
 	<!ENTITY st15 "display:inline;fill:none;">
 	<!ENTITY st16 "display:inline;fill:#B4B342;">
-	<!ENTITY st17 "text-align:center;">
+	<!ENTITY st17 "text-align:center;text-overflow:ellipsis;">
 	<!ENTITY st18 "text-transform:uppercase;">
 ]>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -327,7 +327,7 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 </g>
 <g id="name-div">
 	<rect x="99" y="295.25" style="&st1;" width="402" height="16.14"/>
-	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st17;" width="402" height="20"><%= name %></foreignObject>
+	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st17;" width="402" height="20"><% if(name!=null) { %><%= name %><% } else { %><%= github %><% } %></foreignObject>
 </g>
 <g id="public">
 	<g id="followers-div">
@@ -350,8 +350,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 		</g>
 		<rect x="401.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 449.6328 243.6807)" style="&st2; &st3; &st4;">Followers</text>
-		<rect x="401.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 473.1328 223.6807)" style="&st2; &st3; &st10;"><%= followers %></text>
+		<rect x="401.04" y="197.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="401.04" y="197.5" style="&st2; &st3; &st10; &st17;" width="160.18" height="46.9"><%= followers %></foreignObject>
 	</g>
 	<g id="avatar-div">
 		<image style="overflow:visible;enable-background:new    ;" width="460" height="460" id="avatar_2_" xlink:href="<%= avatar %>" transform="matrix(0.3804 0 0 0.3804 217.0478 106.0478)">
@@ -372,8 +372,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 			L106.85,182.26z"/>
 		<rect x="41.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 79.1328 244.6807)" style="&st2; &st3; &st4;">Repositories</text>
-		<rect x="40.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 112.1328 223.6807)" style="&st2; &st3; &st10;"><%= repos %></text>
+		<rect x="40.04" y="197.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="40.04" y="197.5" style="&st2; &st3; &st10; &st17;" width="160.18" height="46.9"><%= repos %></foreignObject>
 	</g>
 </g>
 <g id="social">
@@ -448,7 +448,7 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 	<!ENTITY st14 "fill:#B4B342;">
 	<!ENTITY st15 "display:inline;fill:none;">
 	<!ENTITY st16 "display:inline;fill:#B4B342;">
-	<!ENTITY st17 "text-align:center;">
+	<!ENTITY st17 "text-align:center;text-overflow:ellipsis;">
 	<!ENTITY st18 "text-transform:uppercase;">
 ]>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -544,7 +544,7 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 </g>
 <g id="name-div">
 	<rect x="99" y="295.25" style="&st1;" width="402" height="16.14"/>
-	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st17;" width="402" height="20"><%= name %></foreignObject>
+	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st17;" width="402" height="20"><% if(name!=null) { %><%= name %><% } else { %><%= github %><% } %></foreignObject>
 </g>
 <g id="public">
 	<g id="followers-div">
@@ -567,8 +567,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 		</g>
 		<rect x="401.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 449.6328 243.6807)" style="&st2; &st3; &st4;">Followers</text>
-		<rect x="401.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 473.1328 223.6807)" style="&st2; &st3; &st10;"><%= followers %></text>
+		<rect x="401.04" y="197.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="401.04" y="197.5" style="&st2; &st3; &st10; &st17;" width="160.18" height="46.9"><%= followers %></foreignObject>
 	</g>
 	<g id="avatar-div">
 		<image style="overflow:visible;enable-background:new    ;" width="460" height="460" id="avatar_2_" xlink:href="<%= avatar %>" transform="matrix(0.3804 0 0 0.3804 217.0478 106.0478)">
@@ -589,8 +589,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 			L106.85,182.26z"/>
 		<rect x="41.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 79.1328 244.6807)" style="&st2; &st3; &st4;">Repositories</text>
-		<rect x="40.04" y="201.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 112.1328 223.6807)" style="&st2; &st3; &st10;"><%= repos %></text>
+		<rect x="40.04" y="197.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="40.04" y="197.5" style="&st2; &st3; &st10; &st17;" width="160.18" height="46.9"><%= repos %></foreignObject>
 	</g>
 </g>
 <g id="social">
@@ -664,7 +664,7 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 	<!ENTITY st14 "fill:#B4B342;">
 	<!ENTITY st15 "display:inline;fill:none;">
 	<!ENTITY st16 "display:inline;fill:#B4B342;">
-	<!ENTITY st17 "text-align:center;">
+	<!ENTITY st17 "text-align:center;text-overflow:ellipsis;">
 	<!ENTITY st18 "text-transform:uppercase;">
 ]>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -760,7 +760,7 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 </g>
 <g id="name-div">
 	<rect x="99" y="288.25" style="&st1;" width="402" height="16.14"/>
-	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st17;" width="402" height="20"><%= name %></foreignObject>
+	<foreignObject id="name" x="99" y="295.25" style="&st8; &st6; &st9; &st17;" width="402" height="20"><% if(name!=null) { %><%= name %><% } else { %><%= github %><% } %></foreignObject>
 </g>
 <g id="public">
 	<g id="followers-div">
@@ -783,8 +783,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 		</g>
 		<rect x="400.04" y="183.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 448.6328 225.6807)" style="&st2; &st3; &st4;">Followers</text>
-		<rect x="400.04" y="183.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 472.1328 205.6807)" style="&st2; &st3; &st10;"><%= followers %></text>
+		<rect x="400.04" y="179.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="400.04" y="179.5" style="&st2; &st3; &st10; &st17;" width="160.18" height="46.9"><%= followers %></foreignObject>
 	</g>
 	<g id="avatar-div">
 		<image style="overflow:visible;enable-background:new    ;" width="460" height="460" id="avatar_1_" xlink:href="<%= avatar %>" transform="matrix(0.3804 0 0 0.3804 216.0478 88.0478)">
@@ -805,8 +805,8 @@ YII=" transform="matrix(1 0 0 1 -7 -8)">
 			L105.85,164.26z"/>
 		<rect x="40.04" y="183.5" style="&st1;" width="160.18" height="46.9"/>
 		<text transform="matrix(1 0 0 1 78.1328 226.6807)" style="&st2; &st3; &st4;">Repositories</text>
-		<rect x="39.04" y="183.5" style="&st1;" width="160.18" height="46.9"/>
-		<text transform="matrix(1 0 0 1 111.1328 205.6807)" style="&st2; &st3; &st10;"><%= repos %></text>
+		<rect x="39.04" y="179.5" style="&st1;" width="160.18" height="46.9"/>
+		<foreignObject x="39.04" y="179.5" style="&st2; &st3; &st10; &st17;" width="160.18" height="46.9"><%= repos %></foreignObject>
 	</g>
 </g>
 <g id="social">
