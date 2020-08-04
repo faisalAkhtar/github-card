@@ -27,7 +27,7 @@ router.get('/card', function(req, res, next) {
     }
   }
   var post_req = https.request(options, (resp) => {
-    console.log('\n\n\n---------------\nstatusCode:', resp.statusCode);
+    console.log('\n---------------\nstatusCode:', resp.statusCode);
 
     if(resp.statusCode==404) {
       res.send(username + " not found!")
@@ -38,7 +38,6 @@ router.get('/card', function(req, res, next) {
     // A chunk of data has been recieved.
     resp.on('data', (chunk) => {
       data += chunk
-      console.log("\ndata recieved")
     });
 
     // A chunk of data has been recieved.
