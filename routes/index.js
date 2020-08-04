@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 router.get('/card', function(req, res, next) {
   var username = req.query.user
   if(username=="" || username==null || username == undefined) {
-    res.send("There was a problem with your request")
+    res.send("Query parameter 'user' missing<br>Please make a request as following /card?user=&lt;your-github-username&gt;")
     return
   }
 
