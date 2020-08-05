@@ -26,14 +26,14 @@ function sendQuery(user) {
 }
 
 function makeCard(obj) {
-    if(obj.login==undefined) {
+    if(obj.login==undefined || obj.type!="User") {
         resetForm()
         document.querySelector(".card").classList.add("empty")
         return
     }
 
-    if(obj.type!="User") return
-
+    document.querySelector(".copyLink").style.display = "unset"
+    document.querySelector(".openInNewWindow").style.display = "unset"
     document.getElementById("avatar").src = "https://avatars.githubusercontent.com/" + obj.login
     document.getElementById("id").innerHTML = obj.id
     document.getElementById("name").innerHTML = obj.name
@@ -65,6 +65,8 @@ function makeCard(obj) {
 }
 
 function resetForm() {
+    document.querySelector(".copyLink").style.display = "none"
+    document.querySelector(".openInNewWindow").style.display = "none"
     document.getElementById("avatar").src = ""
     document.getElementById("id").innerHTML = "&nbsp;"
     document.getElementById("name").innerHTML = "&nbsp;"
@@ -81,4 +83,23 @@ function resetForm() {
     document.getElementById("location").innerHTML = "&nbsp;"
     document.getElementById("public_repos").innerHTML = "&nbsp;"
     document.getElementById("followers").innerHTML = "&nbsp;"
+}
+
+document.querySelector('.openInNewWindow').onclick = (e)=>{
+    let username = document.getElementById('login').innerHTML
+    if(username!='&nbsp;') {
+        window.open(location.href + "api?username=" + username)
+    }
+}
+
+document.querySelector('.copyLink').onclick = (e)=>{
+    let username = document.getElementById('login').innerHTML,
+        link = location.href + "api?username=" + username
+        temp = document.createElement("input")
+    temp.value = link
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand("copy");
+    document.body.removeChild(temp);
+    setTimeout( () => { alert("Link copied\n"+link) }, 200);
 }

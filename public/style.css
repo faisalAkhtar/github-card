@@ -13,11 +13,11 @@ input,textarea,button{background-color:#1E1E1Ef7;color:#9AA83A;font-family:'Ubun
 input,textarea{box-shadow:7px 7px 14px #141414,-7px -7px 14px #282828;border:none;resize:none;color:white;}
 button{cursor:pointer;}
 
-form{width:333px;margin:50px auto;text-align:right;}
-input{width:100%;text-align:center;}
-button{margin:10px 0;}
+input{width:calc(100% - 135px);}
+button{font-size:95%;float:right;}
 
-.card{background-color:#1E1E1Ef7;box-shadow:12px 12px 24px #161616, -12px -12px 24px #262626;color:white;padding:20px;margin:30px auto;max-width:650px;width:95%;border-radius:10px;position:relative;font-size:90%;}
+.container{max-width:650px;width:95%;margin: 0 auto;overflow:hidden;}
+.card{background-color:#1E1E1Ef7;box-shadow:12px 12px 24px #161616, -12px -12px 24px #262626;color:white;padding:20px;margin:30px 0 15px;width:100%;min-height:280px;border-radius:10px;position:relative;font-size:90%;}
 .card .notFound{display:none;}
 .card .notFound img{width:200px;}
 .card.empty>*{opacity:0;}
@@ -39,11 +39,13 @@ button{margin:10px 0;}
 .card #public_repos,.card #followers{margin:8px 0;display:block;font-size:125%;}
 .notFound{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
 .hide{display:none !important;}
+.copyLink{float:left;}
 
 @media screen and (max-width:768px) {
     body{font-size:17px;}
     .card .col{flex:20%;}
     .card .social svg,.card .locationDiv svg{height:18px;}
+    input{width:calc(100% - 120px);}
 }
 @media screen and (max-width:480px) {
     .card img{height:150px;width:150px;}
