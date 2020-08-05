@@ -5,12 +5,12 @@ var imageDataURI = require('image-data-uri');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Github card' });
 });
 
 /* GET card. */
-router.get('/card', function(req, res, next) {
-  var username = req.query.user
+router.get('/api', function(req, res, next) {
+  var username = req.query.username
   if(username=="" || username==null || username == undefined) {
     res.send("Query parameter 'user' missing<br>Please make a request as following /card?user=&lt;your-github-username&gt;")
     return
