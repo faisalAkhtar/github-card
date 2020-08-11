@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <img src="https://ancient-tundra-94967.herokuapp.com/card?user=faisalAkhtar" width="700">
+  <img src="https://ancient-tundra-94967.herokuapp.com/api?username=faisalAkhtar" width="700">
   <br>
   GitHub Card
 </p>
