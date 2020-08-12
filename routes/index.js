@@ -5,6 +5,7 @@ var imageDataURI = require('image-data-uri');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.set({'Access-Control-Allow-Origin': '*'})
   res.render('index', { title: 'Github card' });
 });
 
@@ -51,7 +52,11 @@ router.get('/api', function(req, res, next) {
       data = JSON.parse(data)
       imageDataURI.encodeFromURL(data.avatar_url)
       .then((img) => {
-        res.status(200).type('image/svg+xml').render('card', {
+        res.set({
+          "content-type": "image/svg+xml;charset=utf-8",
+          "cache-control": "max-age=0, s-maxage=0"
+        })
+        res.status(200).render('card', {
           bio: data.bio,
           location: data.location,
           name: data.name,

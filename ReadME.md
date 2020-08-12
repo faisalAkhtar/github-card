@@ -1,15 +1,19 @@
 <h1 align="center">Github Card</h1>
 
-<p align="center">
- A beautiful, dynamically generated <i>unofficial</i> github card for you
-</p>
+<p align="center">A beautiful, dynamically generated <i>unofficial</i> github card for you</p>
 
 <p align="center">
-  <img alt="Issues" src="https://img.shields.io/github/issues/faisalAkhtar/github-card?color=0088ff" />
+  <img alt="Version" src="https://img.shields.io/github/package-json/v/faisalAkhtar/github-card?color=0088ff" />
   &nbsp;
-  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/faisalAkhtar/github-card?color=0088ff" />
+  <img alt="Code size" src="https://img.shields.io/github/languages/code-size/faisalAkhtar/github-card" />
   &nbsp;
-  <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/static/v1?label=LICENSE&message=MIT&color=informational" /></a>
+  <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/faisalAkhtar/github-card" />
+  &nbsp;
+  <img alt="Feature requested" src="https://img.shields.io/github/issues/faisalAkhtar/github-card/feature-request" />
+  &nbsp;
+  <img alt="Bugs reported" src="https://img.shields.io/github/issues/faisalAkhtar/github-card/bug" />
+  &nbsp;
+  <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/github/license/faisalAkhtar/github-card" /></a>
 </p>
 
 <p align="center">
@@ -21,7 +25,7 @@
 </p>
 
 <p align="center">
-  <img src="https://ancient-tundra-94967.herokuapp.com/api?username=faisalAkhtar" width="700">
+  <img src="https://ancient-tundra-94967.herokuapp.com/api?username=faisalakhtar" width="700">
   <br>
   GitHub Card
 </p>

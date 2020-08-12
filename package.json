@@ -1,10 +1,20 @@
 {
-  "name": "app",
-  "version": "0.0.0",
-  "private": true,
+  "name": "github-card",
+  "version": "4.2.0",
+  "description": "Get beautiful, dynamically generated unofficial github cards",
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/faisalAkhtar/github-card.git"
+	},
+	"author": "Faisal",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/faisalAkhtar/github-card/issues"
+	},
+	"homepage": "https://github.com/faisalAkhtar/github-card#readme",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
